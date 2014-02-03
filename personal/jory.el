@@ -18,7 +18,8 @@
   (require 'ls-lisp))
 
 (setq enable-recursive-minibuffers t
-      visible-bell t)
+      visible-bell t
+      abbrev-mode t)
 
 (global-rainbow-delimiters-mode)
 (setq js-indent-level '2)
