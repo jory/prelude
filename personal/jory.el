@@ -30,6 +30,34 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(defun builder ()
+  (interactive)
+  (async-shell-command "cd ~/Code/Pressly/app-builder/ && bundle install && bundle exec ./bin/builder start" ":BUILDER"))
+
+(defun feeder ()
+  (interactive)
+  (async-shell-command "cd ~/Code/Pressly/pressly-feeder/ && bundle install && bundle exec ./bin/feeder start" ":FEEDER"))
+
+(defun dashboard ()
+  (interactive)
+  (async-shell-command "cd ~/Code/Pressly/pressly-dashboard/ && bundle install && bundle exec rails s" ":DASHBOARD-BACK"))
+
+(defun dashboard-front ()
+  (interactive)
+  (async-shell-command "cd ~/Code/Pressly/pressly-dashboard/webapp && bower install && npm install && grunt server" ":DASHBOARD-FRONT"))
+
+(defun api ()
+  (interactive)
+  (async-shell-command "cd ~/Code/Pressly/pressly-api/ && bundle install && bundle exec ./bin/api start" ":API"))
+
+
+(global-set-key (kbd "\C-cqb") 'builder)
+(global-set-key (kbd "\C-cqf") 'feeder)
+(global-set-key (kbd "\C-cqd") 'dashboard)
+(global-set-key (kbd "\C-cqh") 'dashboard-front)
+(global-set-key (kbd "\C-cqa") 'api)
+
+
 (defun compass ()
   (interactive)
   (async-shell-command "compass watch" ":COMPASS"))
