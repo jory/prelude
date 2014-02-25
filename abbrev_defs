@@ -35,7 +35,7 @@
 
 (define-abbrev-table 'erc-list-menu-mode-abbrev-table '())
 
-s(define-abbrev-table 'erc-mode-abbrev-table '())
+(define-abbrev-table 'erc-mode-abbrev-table '())
 
 (define-abbrev-table 'eshell-mode-abbrev-table '())
 
