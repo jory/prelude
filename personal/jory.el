@@ -2,12 +2,10 @@
 ;;; Commentary:
 ;;; Code:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; Ugh, this isn't working since I updated prelude
-;;
-;; (require 'mouse)
-;; (xterm-mouse-mode)
-;; (defun track-mouse (e))
+
+(require 'mouse)
+(xterm-mouse-mode)
+(defun track-mouse (e))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -29,34 +27,6 @@
 (global-set-key (kbd "\C-x\C-m") 'smex)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(defun builder ()
-  (interactive)
-  (async-shell-command "cd ~/Code/Pressly/app-builder/ && bundle install && bundle exec ./bin/builder start" ":BUILDER"))
-
-(defun feeder ()
-  (interactive)
-  (async-shell-command "cd ~/Code/Pressly/pressly-feeder/ && bundle install && bundle exec ./bin/feeder start" ":FEEDER"))
-
-(defun dashboard ()
-  (interactive)
-  (async-shell-command "cd ~/Code/Pressly/pressly-dashboard/ && bundle install && bundle exec rails s" ":DASHBOARD-BACK"))
-
-(defun dashboard-front ()
-  (interactive)
-  (async-shell-command "cd ~/Code/Pressly/pressly-dashboard/webapp && bower install && npm install && grunt server" ":DASHBOARD-FRONT"))
-
-(defun api ()
-  (interactive)
-  (async-shell-command "cd ~/Code/Pressly/pressly-api/ && bundle install && bundle exec ./bin/api start" ":API"))
-
-
-(global-set-key (kbd "\C-cqb") 'builder)
-(global-set-key (kbd "\C-cqf") 'feeder)
-(global-set-key (kbd "\C-cqd") 'dashboard)
-(global-set-key (kbd "\C-cqh") 'dashboard-front)
-(global-set-key (kbd "\C-cqa") 'api)
-
 
 (defun compass ()
   (interactive)
@@ -87,10 +57,6 @@
 (setq magit-default-tracking-name-function 'magit-default-tracking-name-branch-only)
 (global-set-key (kbd "C-c m b") 'magit-blame-mode)
 (global-set-key (kbd "C-c m f") 'magit-file-log)
-
-;; (setq erc-echo-timestamps 't
-;;       erc-hide-timestamps 't
-;;       erc-timestamp-use-align-to 't)
 
 (provide 'jory)
 ;;; jory.el ends here
