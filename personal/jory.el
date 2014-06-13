@@ -36,18 +36,18 @@
   (interactive)
   (async-shell-command "grunt server" ":GRUNT"))
 
-(defun webify ()
+(defun mongod ()
   (interactive)
-  (async-shell-command "webify" ":WEBIFY"))
+  (async-shell-command "mongod" ":MONGOD"))
 
 (defun update-sh ()
   (interactive)
   (async-shell-command "./update.sh" ":UPDATE"))
 
+(global-set-key (kbd "\C-cqm") 'mongod)
 (global-set-key (kbd "\C-cqc") 'compass)
 (global-set-key (kbd "\C-cqg") 'grunt-server)
 (global-set-key (kbd "\C-cqu") 'update-sh)
-(global-set-key (kbd "\C-cqw") 'webify)
 
 (global-set-key (kbd "\C-cqs") 'sort-lines)
 
