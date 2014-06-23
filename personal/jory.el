@@ -7,10 +7,12 @@
         prelude-coffee
         prelude-css
         prelude-erc
+        prelude-ido
         prelude-js
         prelude-key-chord
         prelude-org
         prelude-scss
+        prelude-shell
         prelude-web))
 
 (setq enable-recursive-minibuffers t
