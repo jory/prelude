@@ -20,4 +20,5 @@ projectile-bookmarks.eld
 session*
 .cask
 tramp
-/var/pcache
+var/pcache
+/personal/erc-secret.el

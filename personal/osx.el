@@ -1,0 +1,5 @@
+(when (eq system-type 'darwin)
+  (require 'pbcopy)
+  (turn-on-pbcopy)
+  (setq ls-lisp-use-insert-directory-program nil)
+  (require 'ls-lisp))
