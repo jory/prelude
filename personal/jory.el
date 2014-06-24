@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
+(prelude-require-packages '(dired-rainbow rainbow-identifiers))
+
 (mapc 'require
       '(prelude-emacs-lisp
         prelude-coffee
