@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(prelude-require-packages '(dired-rainbow rainbow-identifiers))
+(prelude-require-packages '(dired-rainbow rainbow-identifiers editorconfig))
 
 (mapc 'require
       '(prelude-emacs-lisp
