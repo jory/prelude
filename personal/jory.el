@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(prelude-require-packages '(dired-rainbow rainbow-identifiers editorconfig))
+(prelude-require-packages '(dired-rainbow rainbow-identifiers editorconfig ag))
 
 (mapc 'require
       '(prelude-emacs-lisp
@@ -20,6 +20,12 @@
 (setq enable-recursive-minibuffers t
       visible-bell t
       abbrev-mode t)
+
+;;; By default ag-arguments includes "--smart-case", but that makes ag
+;;; ignore .gitignore files underneath the top directory.
+
+(setq ag-arguments '("--nogroup" "--column" "--"))
+(defalias 'projectile-ack 'projectile-ag)
 
 (global-set-key (kbd "\C-cqs") 'sort-lines)
 
