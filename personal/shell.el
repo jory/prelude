@@ -23,4 +23,16 @@
 (global-set-key (kbd "\C-cqg") 'grunt-server)
 (global-set-key (kbd "\C-cqu") 'update-sh)
 
+
+(defun services ()
+  (interactive)
+  (async-shell-command "cd ~/src/lapetus/services && FETCH_DEBUG_FILE=./fetch.log ./start" ":SERVICES"))
+
+(defun catalina ()
+  (interactive)
+  (async-shell-command "catalina run" ":CATALINA"))
+
+(global-set-key (kbd "\C-cqws") 'services)
+(global-set-key (kbd "\C-cqwc") 'catalina)
+
 (provide 'shell)
