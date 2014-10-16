@@ -29,7 +29,7 @@
 
 (global-set-key (kbd "\C-cqs") 'sort-lines)
 
-(global-rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 (add-to-list 'auto-mode-alist '("\\.hbs\\'" . web-mode))
 
