@@ -14,13 +14,18 @@
     (interactive)
     (async-shell-command "mongod" ":MONGOD"))
 
+(defun npm-install ()
+  (interactive)
+  (async-shell-command "npm install" ":NPM-INSTALL"))
+
 (defun update-sh ()
     (interactive)
     (async-shell-command "./update.sh" ":UPDATE"))
 
-(global-set-key (kbd "\C-cqm") 'mongod)
 (global-set-key (kbd "\C-cqc") 'compass)
 (global-set-key (kbd "\C-cqg") 'grunt-server)
+(global-set-key (kbd "\C-cqm") 'mongod)
+(global-set-key (kbd "\C-cqn") 'npm-install)
 (global-set-key (kbd "\C-cqu") 'update-sh)
 
 
