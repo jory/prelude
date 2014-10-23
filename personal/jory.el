@@ -25,7 +25,9 @@
 ;;; ignore .gitignore files underneath the top directory.
 
 (setq ag-arguments '("--nogroup" "--column" "--"))
+
 (defalias 'projectile-ack 'projectile-ag)
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 (global-set-key (kbd "\C-cqs") 'sort-lines)
 
