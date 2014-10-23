@@ -2,3 +2,4 @@
 (setq erc-enable-logging nil)
 (setq erc-lurker-hide-list '("JOIN" "PART" "QUIT"))
 (require 'prelude-erc)
+(setq erc-autojoin-channels-alist '(("freenode.net")))
