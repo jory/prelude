@@ -35,4 +35,6 @@
 
 (add-to-list 'auto-mode-alist '("\\.hbs\\'" . web-mode))
 
+(menu-bar-mode -1)
+
 (provide 'jory)
